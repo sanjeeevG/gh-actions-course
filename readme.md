@@ -26,3 +26,34 @@
             git config --global user.name "name"
             git config --global user.email "email"
         ```
+    - generating ssh key
+        - use gh cli command
+        Ref: 
+        https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=windows&tool=cli
+        https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+        https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=windows&tool=cli
+
+        ```
+        ssh-keygen -t ed25519 -C "sanjeeev_sinha@hotmail.com"
+        
+        *** press enter to add/select default
+        *** go to git bash terminal and list from ssh folder
+            ls ~/.ssh
+            pbcopy > ~\.ssh\id_ed25519.pub
+
+        *** from powershell terminal 
+            dir ~/.ssh
+            Get-Content ~\.ssh\id_ed25519.pub | Set-Clipboard
+            ssh-add ~\.ssh\id_ed25519
+            
+            ## in case you get error in adding to the ssh agent, do the following on powershell (in admin mode)
+
+            Get-Service -Name ssh-agent | Set-Service -StartupType Manual
+            Start-Service ssh-agent
+
+
+        ```
+
+
+        ```
