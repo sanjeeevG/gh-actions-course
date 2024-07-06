@@ -10,10 +10,10 @@ jobs:
     echo-goodbuy:
         runs-on: ubuntu-latest
         steps:
-            - name: "failed step"
+            - name: "Successful step"
               run: |
-                echo "I will fail"
-                exit 1
+                echo "I ran successfully"
+                exit 0
             - name: "say goodbuy"
               run: echo "good bye"
       
