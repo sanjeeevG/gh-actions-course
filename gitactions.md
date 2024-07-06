@@ -22,18 +22,17 @@
         - steps run sequencially by default
     
     ```
-    name: my workflow
-    on: push 
-    jobs: 
-        my-first-job:
-            runs-on: ubuntu-latest  #uses linux runners
-            steps:
-                - run: echo "hello world as first job"
-        my-second-job: 
-            runs-on: ubuntu-latest
-            steps:
-                - run: echo "hello world as 2nd job"
-
+        name: my workflow
+        on: push 
+        jobs: 
+            my-first-job:
+                runs-on: ubuntu-latest  #uses linux runners
+                steps:
+                    - run: echo "hello world as first job"
+            my-second-job: 
+                runs-on: ubuntu-latest
+                steps:
+                    - run: echo "hello world as 2nd job"
     ```
 
 # Excercise
@@ -41,6 +40,11 @@
         - *** make sure you have gihub action extention installed.
     - Create .github/workflow folder
     - create simple example as mentioned above or excercise 01-building-blocks-yaml
+
+# Events that trigger workflows
+    - Reference
+    https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
+    - 
 
 
 
