@@ -54,6 +54,4 @@
 
         ```
 # important tools
-    - cron generator: https://crontab.cronhub.io/ 
-    - Something has changed. 
-    
+    - cron generator: https://crontab.cronhub.io/     
