@@ -16,12 +16,12 @@ jobs:
             - name: show os
               shell: bash
               run: |
-                echo "This job is running on an windows runner."
-                echo "printing runner name - ${{github.run_id}}"
-    mac-echo:
-        runs-on: macos-latest
-        steps: 
-            - name: show os
-              run: |
-                echo "This job is running on an MacOs runner."
-                echo "printing runner name - ${{github.run_id}}"
+                echo "This job is running on a windows runner."
+                echo "printing the runner name - - $RUNNER_OS"
+    # mac-echo:
+    #     runs-on: macos-latest
+    #     steps: 
+    #         - name: show os
+    #           run: |
+    #             echo "This job is running on an MacOs runner."
+    #             echo "printing runner name - ${{github.run_id}}"
