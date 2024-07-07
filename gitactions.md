@@ -46,5 +46,11 @@
     https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
     - 
 
-
+# workflow runners
+    - Github hosted: standard and large
+        - Managed by github (patching,security etc)
+        - A fresh VM scoped to the Job, even dependent job will run on fresh VM
+    - self hosted: custom config
+        - user managed (security and patching is user responsibility)
+        - Unclean VM can be scoped
 
