@@ -9,11 +9,12 @@ jobs:
             - name: show os 
               run: |
                 echo "This job is running on an Ubuntu runner."
-                echo "printing runner name - ${{runner.os}}"
+                echo "printing runner name - $RUNNER_OS"
     windows-echo:
         runs-on: windows-latest
         steps: 
             - name: show os
+              shell: bash
               run: |
                 echo "This job is running on an windows runner."
                 echo "printing runner name - ${{github.run_id}}"
