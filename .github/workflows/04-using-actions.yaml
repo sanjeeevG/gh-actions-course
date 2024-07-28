@@ -1,0 +1,11 @@
+name: "using-actions"
+on:
+    push
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps: 
+        - name: "checkout"
+          uses: actions/checkout@v4
+          with: 
+            path: "main"
